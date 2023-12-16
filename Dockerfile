@@ -20,7 +20,7 @@ RUN bundle config set --local without 'development test' && \
     bundle config set --local path /rubygems
 RUN bundle install
 
-# Stage 4: prod (image that will be deployed all of the environments - qa, staging, prod etc.)
+# Stage 4: prod (image that will be deployed to all of the environments - qa, staging, prod etc.)
 FROM ruby:3.1.2-slim as prod
 RUN mkdir /app
 WORKDIR /app
